@@ -1,6 +1,53 @@
-"use strict";
-exports.__esModule = true;
-function greet(name) {
-    console.log("hello " + name);
+//export{}
+// let a="sai";
+// function greet(name){
+//     console.log("hello "+name);
+// }
+// greet('amulya');
+// let b: string='sai';
+// console.log(b);
+// let n: number=100;
+// let isVald: boolean=true;
+// let arr: String[]=['red','pink','green'];
+// let arr1: null=null;
+// let arr2: undefined=undefined;
+// let arr3: any=['sai','22'];
+// console.log(n);
+// console.log(isVald);
+// console.log(arr);
+// console.log(arr1);
+// console.log(arr2);
+// console.log(arr3);
+function fun1() {
+    return "trying  to have fun";
 }
-greet('amulya');
+var fundoo = function () {
+    return "Lol...\u0065\u0301";
+};
+console.log(fun1());
+console.log(fundoo());
+// function usingParams(pRequired: boolean,pDefault: string="DBS-ID",pOptional?:number,...pRest:string[]){
+//     console.log(pRequired,pDefault,pOptional,pRest);
+// }
+// usingParams(true);
+// function restParams(...pRest:string[]){
+//     console.log(pRest);
+//     console.log();
+// }
+// restParams('1','2','3');
+//currly function (function inside a function)
+function compilicated() {
+    console.log("inside complicated:");
+    return function () {
+        console.log("i will display if invoke only!:");
+        return function (pName) {
+            console.log("hello" + pName);
+        };
+    };
+}
+compilicated()()("sai");
+//self invokable functions
+(function () {
+    console.log("a function");
+    return "a value";
+})();
