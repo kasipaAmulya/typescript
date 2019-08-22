@@ -53,7 +53,9 @@ function compilicated(){
 }
 compilicated()()("sai");
 //self invokable functions
+//(<function implementatio n>)();
+//eg:(function(){})();
 (function(){
     console.log("a function");
     return "a value";
-})();
+})();//
