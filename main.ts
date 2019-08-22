@@ -59,3 +59,19 @@ compilicated()()("sai");
     console.log("a function");
     return "a value";
 })();//
+//lamda functions
+//()=><value to return>
+()=>{console.log('B function');
+return "b value"};
+var p=()=>console.log("a value");
+p();
+ var out=(a)=>(a,x,y)=>x+y+a;
+ console.log(out(10)(10,20,50));
+
+ //reverse engineering
+ console.log((function(a){
+     return function(x,y){
+         return x+y+a;
+     }
+ })(10)(20,30));
+

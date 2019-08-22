@@ -47,7 +47,24 @@ function compilicated() {
 }
 compilicated()()("sai");
 //self invokable functions
+//(<function implementatio n>)();
+//eg:(function(){})();
 (function () {
     console.log("a function");
     return "a value";
-})();
+})(); //
+//lamda functions
+(function () {
+    console.log('B function');
+    return "b value";
+});
+var p = function () { return console.log("a value"); };
+p();
+var out = function (a) { return function (a, x, y) { return x + y + a; }; };
+console.log(out(10)(10, 20, 50));
+//reverse engineering
+console.log((function (a) {
+    return function (x, y) {
+        return x + y + a;
+    };
+})(10)(20, 30));
