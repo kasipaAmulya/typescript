@@ -1,4 +1,4 @@
-//export{}
+// export{}
 // let a="sai";
 // function greet(name){
 //     console.log("hello "+name);
@@ -54,6 +54,7 @@ compilicated()()("sai");
     return "a value";
 })(); //
 //lamda functions
+//()=><value to return>
 (function () {
     console.log('B function');
     return "b value";

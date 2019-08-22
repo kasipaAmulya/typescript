@@ -1,4 +1,4 @@
-//export{}
+// export{}
 // let a="sai";
 // function greet(name){
 //     console.log("hello "+name);
@@ -22,7 +22,7 @@ function fun1(): string{
     return "trying  to have fun";
 }
 
-var fundoo=function():string{
+let fundoo=function():string{
     return "Lol...\u0065\u0301";
 }
 
