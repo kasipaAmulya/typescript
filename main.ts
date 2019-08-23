@@ -18,16 +18,16 @@
 // console.log(arr1);
 // console.log(arr2);
 // console.log(arr3);
-function fun1(): string{
+function fun(): string{
     return "trying  to have fun";
 }
 
-let fundoo=function():string{
+let fundo=function():string{
     return "Lol...\u0065\u0301";
 }
 
-console.log(fun1());
-console.log(fundoo());
+console.log(fun());
+console.log(fundo());
 
 
 // function usingParams(pRequired: boolean,pDefault: string="DBS-ID",pOptional?:number,...pRest:string[]){
@@ -55,23 +55,41 @@ compilicated()()("sai");
 //self invokable functions
 //(<function implementatio n>)();
 //eg:(function(){})();
-(function(){
-    console.log("a function");
-    return "a value";
-})();//
-//lamda functions
-//()=><value to return>
-()=>{console.log('B function');
-return "b value"};
-var p=()=>console.log("a value");
-p();
- var out=(a)=>(a,x,y)=>x+y+a;
- console.log(out(10)(10,20,50));
+// (function(){
+//     console.log("a function");
+//     return "a value";
+// })();//
+// //lamda functions
+// //()=><value to return>
+// ()=>{console.log('B function');
+// return "b value"};
+// var p=()=>console.log("a value");
+// p();
+//  var out=(a)=>(a,x,y)=>x+y+a;
+//  console.log(out(10)(10,20,50));
 
- //reverse engineering
- console.log((function(a){
-     return function(x,y){
-         return x+y+a;
-     }
- })(10)(20,30));
+//  //reverse engineering
+//  console.log((function(a){
+//      return function(x,y){
+//          return x+y+a;
+//      }
+//  })(10)(20,30));
 
+/k/nput :"3+2*5"
+//output ="(3)=>(2,5)=>2*5+3"
+let a="";
+let s="2+3*5";
+for ( let i=0;i<s.length;i++){
+    if(s[i]=='*')
+    console.log(`(${s[i-1]},${s[i+1]})=>(${s[i-1]}*${s[i+1]})`);
+else
+if(s[i]=='+')
+    console.log(`(${s[i-1]},${s[i+1]})=>(${s[i-1]}+${s[i+1]})`);
+}
+// var re = /2+3*5/gi; 
+// //var str = "Apples are round, and apples are juicy.";
+// if (str.search(re) == -1 ) { 
+//    console.log("Does not contain Apples" ); 
+// } else { 
+//    console.log("Contains Apples" ); 
+// } 

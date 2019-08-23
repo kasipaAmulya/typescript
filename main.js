@@ -18,14 +18,14 @@
 // console.log(arr1);
 // console.log(arr2);
 // console.log(arr3);
-function fun1() {
+function fun() {
     return "trying  to have fun";
 }
-var fundoo = function () {
+var fundo = function () {
     return "Lol...\u0065\u0301";
 };
-console.log(fun1());
-console.log(fundoo());
+console.log(fun());
+console.log(fundo());
 // function usingParams(pRequired: boolean,pDefault: string="DBS-ID",pOptional?:number,...pRest:string[]){
 //     console.log(pRequired,pDefault,pOptional,pRest);
 // }
@@ -49,23 +49,39 @@ compilicated()()("sai");
 //self invokable functions
 //(<function implementatio n>)();
 //eg:(function(){})();
-(function () {
-    console.log("a function");
-    return "a value";
-})(); //
-//lamda functions
-//()=><value to return>
-(function () {
-    console.log('B function');
-    return "b value";
-});
-var p = function () { return console.log("a value"); };
-p();
-var out = function (a) { return function (a, x, y) { return x + y + a; }; };
-console.log(out(10)(10, 20, 50));
-//reverse engineering
-console.log((function (a) {
-    return function (x, y) {
-        return x + y + a;
-    };
-})(10)(20, 30));
+// (function(){
+//     console.log("a function");
+//     return "a value";
+// })();//
+// //lamda functions
+// //()=><value to return>
+// ()=>{console.log('B function');
+// return "b value"};
+// var p=()=>console.log("a value");
+// p();
+//  var out=(a)=>(a,x,y)=>x+y+a;
+//  console.log(out(10)(10,20,50));
+//  //reverse engineering
+//  console.log((function(a){
+//      return function(x,y){
+//          return x+y+a;
+//      }
+//  })(10)(20,30));
+/k/nput;
+"3+2*5";
+//output ="(3)=>(2,5)=>2*5+3"
+var a = "";
+var s = "2+3*5";
+for (var i = 0; i < s.length; i++) {
+    if (s[i] == '*')
+        console.log("(" + s[i - 1] + "," + s[i + 1] + ")=>(" + s[i - 1] + "*" + s[i + 1] + ")");
+    else if (s[i] == '+')
+        console.log("(" + s[i - 1] + "," + s[i + 1] + ")=>(" + s[i - 1] + "+" + s[i + 1] + ")");
+}
+// var re = /2+3*5/gi; 
+// //var str = "Apples are round, and apples are juicy.";
+// if (str.search(re) == -1 ) { 
+//    console.log("Does not contain Apples" ); 
+// } else { 
+//    console.log("Contains Apples" ); 
+// } 
